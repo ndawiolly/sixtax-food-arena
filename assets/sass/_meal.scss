@@ -1,0 +1,52 @@
+#cont_meal {
+  height: 100%;
+  background: url(../images/footer.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  #cont_meal_first {
+    height: 30vh;
+    background: color(brown3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #meal_container {
+    height: 66%;
+    width: 100%;
+    border: 5px solid color(brown1);
+    margin-top: 2%;
+    background: color(brown2);
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    #meal_container_card {
+      height: 50%;
+      width: 30%;
+      border: 10px solid white;
+      position: relative;
+      #overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.411);
+        height: 30%;
+        width: 100%;
+        bottom: 0;
+        #overlay_cont{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 80px;
+        }
+
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 300px !important;
+      }
+    }
+  }
+}

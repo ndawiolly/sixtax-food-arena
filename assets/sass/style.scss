@@ -1,0 +1,303 @@
+@import "cont/colors";
+@import "cont/function";
+@import "cont/mixin";
+@import "meal";
+
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Edu+NSW+ACT+Foundation:wght@500&family=Open+Sans:wght@400;500&family=Quicksand:wght@400;500;600&family=Sedgwick+Ave+Display&family=Tilt+Prism&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Tilt Prism", cursive;
+}
+
+#header_container {
+  height: 225vh;
+  width: 100%;
+  background-image: url(../images/header_img1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @include tabletLg {
+    height: 277vh;
+  }
+  #header_cont2 {
+    height: 57vh !important;
+    width: 100% !important;
+    background-color: color(brown3);
+    position: relative;
+    font-family: "Quicksand", sans-serif;
+    
+    #header_cont2_div1 {
+      padding-top: 40px;
+      padding-bottom: 2px;
+      display: flex;
+      justify-content: flex-end;
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+    #header_cont2_div2 {
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      #header_cont2_div2_date {
+        line-height: 10px;
+        color: white;
+        text-align: end;
+        p {
+          text-decoration: underline;
+        }
+      }
+    }
+    #cont2_nav {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      @include large {
+        justify-content: right;
+      }
+      #cont2_nav_unordered {
+        display: flex;
+        // gap:20%;
+        li {
+          list-style: none;
+          border-right: solid;
+          padding: 10px 55px;
+          color: white;
+          background-color: color(brown3);
+          @include large {
+            padding: 10px;
+          }
+          a {
+            text-decoration: none;
+            color: white;
+          }
+          &:hover {
+            background-color: color(dark);
+          }
+        }
+      }
+    }
+  }
+  #header_container_open {
+    margin-top: 30px;
+    height: 70vh;
+    width: 50%;
+    background-color: color(brown3b);
+    text-align: center;
+    @include tabletLg {
+      width: 100%;
+    }
+    @include tablet {
+      padding: 0 10px !important;
+    }
+    p {
+      color: white;
+      font-size: 500%;
+      @include tabletLg {
+        font-size: 400%;
+        padding-top: 50px;
+      }
+      @include tablet {
+        font-size: 300%;
+        padding-top: 100px;
+      }
+    }
+  }
+  //   card header container
+  #header_container_card {
+    height: 100vh;
+    background-color: color(brown4);
+    @include tabletLg {
+      height: 152vh;
+    }
+    #header_container_card1 {
+      display: flex;
+      gap: 10px;
+      padding-top: 10px;
+      text-align: center;
+      color: white;
+      @include tabletLg {
+        display: block;
+      }
+      .card {
+        height: 60%;
+        background-color: color(brown5);
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        text-align: center;
+        color: white;
+        @include tabletLg {
+          height: 25%;
+          width: 105%;
+          margin-bottom: 10px;
+          float: right;
+        }
+        @include large{
+          width: 100%;
+        }
+        hr {
+          height: 5px;
+          background-color: color(brown3);
+        }
+        h3 {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+}
+
+// second section
+#second_section {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/wine.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  #second_section_cont {
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    @include tabletLg {
+      padding: 40px;
+      position: relative;
+    }
+    @include tablet {
+      padding: 5px;
+    }
+    #second_section_cont_img {
+      img {
+        @include tabletLg {
+          width: 400px;
+        }
+        @include tablet {
+          width: 300px;
+          border-radius: 5px;
+        }
+      }
+      p {
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+        font-size: x-large;
+        @include tabletLg {
+          font-size: large;
+        }
+      }
+    }
+    #second_section_right {
+      color: white;
+      font-weight: bolder;
+      h2 {
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+// footer section
+#footer-cont {
+  height: 105vh;
+  background-image: url(../images/footer.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  #footer-cont1 {
+    height: 100vh;
+    background-color: color(brown3b);
+    padding: 10% 30px;
+    display: flex;
+    gap: 10px;
+    border: 4px solid white;
+    @include tabletLg {
+      width: 100%;
+      padding: 10px 15px;
+    }
+    #footer_map {
+      text-align: center;
+      color: white;
+      #map {
+        height: 50vh;
+        width: 100%;
+      }
+      // modal content
+      #modal_contact {
+        @include tabletLg {
+          display: block !important;
+        }
+      }
+    }
+    #footer_map1 {
+      @include tabletLg {
+        display: none;
+      }
+      color: white;
+      h2 {
+        text-align: center;
+      }
+      form {
+        #form_footer {
+          .m-1 {
+            input {
+              box-shadow: none !important;
+              border: none !important;
+              background: transparent;
+              border-bottom: 1px solid white !important;
+              border-radius: 0;
+            }
+          }
+        }
+        .mt-3 {
+          textarea {
+            background: transparent !important;
+            border-radius: 0 !important;
+            border: none !important;
+            color: white;
+            box-shadow: none !important;
+            border-bottom: 1px solid white !important;
+          }
+        }
+        // button
+        .m-1 {
+          button {
+            color: color(brown4);
+          }
+        }
+      }
+    }
+
+    // third column
+    #footer_map2 {
+      text-align: center;
+      color: white;
+      width: 100% !important;
+      @include tablet {
+        display: none;
+      }
+
+      h2 {
+        text-decoration: underline;
+      }
+      p {
+        padding-top: 30px !important;
+        line-height: 40px;
+      }
+      #social_handles {
+        font-size: 40px !important;
+        color: black !important;
+        padding-top: 60px;
+      }
+    }
+  }
+}
